@@ -37,7 +37,7 @@
 A python library for terminal programs to ask users questions
 and validate their responses.
 It is pure Python (3.6+)
-and requires no dependencies beyond the standard library.
+and requires no dependencies beyond the standard library but **datetime**.
 
 # Brief Overview
 
