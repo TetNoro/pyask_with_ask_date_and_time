@@ -89,7 +89,7 @@ Please see below for more information.
 
 # Installation
 
-`pyask` is available on the Python Package Index (PyPI) and
+`pyask` **(The original project, not this fork)** is available on the Python Package Index (PyPI) and
 can be installed with `pip`:
 
 ```
