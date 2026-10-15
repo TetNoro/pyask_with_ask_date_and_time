@@ -1,0 +1,34 @@
+import pyask_with_ask_date_and_time.pyask as pyask
+from functools import partial
+
+multi_eval = pyask.multi_eval()
+
+def start_with_a(value):
+    if value[0] == "a":
+         return True
+    return False
+
+def finish_with_py(value):
+    if value[-1] == "y" and value[-2] == "p":
+         return True
+    return False
+
+def less_than_6_character(value):
+    if len(value) <= 6:
+        return True
+    return False
+
+multi_eval.eval.append(start_with_a)
+multi_eval.eval.append(finish_with_py)
+multi_eval.eval.append(less_than_6_character)
+
+answer = pyask.ask(
+"""                                                                  
+insert a word.                                                       
+- with less o equal character than 6.                                
+- finish with py                                                     
+- start_with a                                                       
+""",
+aid="a string",
+process_func=partial(pyask.process, str, multi_eval)
+)
