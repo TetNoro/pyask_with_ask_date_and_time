@@ -18,4 +18,4 @@ datetime.date(2026, 12, 5)
 ```
 
 # Original project
-to submit a [Pyask](https://github.com/tmward/pyask/)
+Here [Pyask](https://github.com/tmward/pyask/)
