@@ -2,9 +2,9 @@
 
 from functools import partial
 
-from .utils import always_true, process
+from .utils import always_true, process, multi_eval
 
-__all__ = ("ask",)
+__all__ = ("ask", "multi_eval")
 
 
 def print_choices(choices):
