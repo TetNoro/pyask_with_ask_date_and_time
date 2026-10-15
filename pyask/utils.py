@@ -24,6 +24,18 @@ def items(s, func=str):
     return [func(x) for x in re.split(r"\s*,\s*|\s+", s)]
 
 
+class multi_eval():
+    def __init__(self):
+        self.eval = []
+    def __call__(self, value):
+        for n in self.eval:
+            if n(value) == False:
+                return False
+        else:
+            return value
+
+
+
 def ns_between(l, r, ns):
     """Checks if all ns are between l and r (inclusive)."""
     return all(l <= n <= r for n in ns)
